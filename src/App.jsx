@@ -4,49 +4,46 @@ import Error from "./Components/About/Error"
 import Body from "./Components/Body/Body"
 import Footer from "./Components/Footer/Footer"
 import Header from "./Components/Header/Header"
-import { createBrowserRouter ,Outlet,RouterProvider} from "react-router-dom"
+import { createHashRouter, Outlet, RouterProvider } from "react-router-dom"
 import RestaurentMenu from "./Components/RestaurentMenu/RestaurentMenu"
 
-
 function App() {
-  
-
   return (
-
-   <div className="app">
-    <Header/>
-    <Outlet/>
-    <Footer/>
-   </div>
+    <div className="app">
+      <Header/>
+      <Outlet/>
+      <Footer/>
+    </div>
   )
 }
- export const appRouter=createBrowserRouter([
+
+export const appRouter = createHashRouter([
   {
-    path:"/",
-    element:<App/>,
-    children:[
+    path: "/",
+    element: <App/>,
+    children: [
       {
-        path:"/",
-        element:<Body/>,
+        path: "/",
+        element: <Body/>,
       },
       {
-        path:"/about",
-        element:<About/>,
+        path: "/about",
+        element: <About/>,
       },
       {
-        path:"/contact",
-        element:<Contact/>,
+        path: "/contact",
+        element: <Contact/>,
       },
       {
-        path:"/restaurant/:resId",
-        element:<RestaurentMenu/>
-      } 
-      
+        path: "/restaurant/:resId",
+        element: <RestaurentMenu/>
+      }
     ]
   },
   {
-    path:"*",
-    element:<Error/>
+    path: "*",
+    element: <Error/>
   }
 ])
+
 export default App
