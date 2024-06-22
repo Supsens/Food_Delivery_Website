@@ -22,7 +22,7 @@ function App() {
 }
  export const appRouter=createBrowserRouter([
   {
-    path:"/Food_Delivery_Website/",
+    path:"/",
     element:<App/>,
     children:[
       {
