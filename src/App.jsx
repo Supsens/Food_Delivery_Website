@@ -26,7 +26,7 @@ function App() {
     element:<App/>,
     children:[
       {
-        path:"/",
+        path:"/Food_Delivery_Website/",
         element:<Body/>,
       },
       {
