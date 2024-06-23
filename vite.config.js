@@ -4,15 +4,6 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base:"/Food_Delivery_Website/",
-  server: {
-    proxy: {
-      '/api': {
-        target: 'https://www.swiggy.com/',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '')
-      }
-    }
-  }
+  base:"/Food_Delivery_Website/"
 });
 
