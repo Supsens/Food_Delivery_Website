@@ -3,10 +3,12 @@ import { LOGO_URL } from "../../Utils/logo";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import useStatus from "../../Utils/useStatus";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [userstate, setUserstate] = useState("Login");
   const onlinestatus = useStatus();
+  const cart=useSelector((store=>store.cart.items))
 
   return (
     <header className="flex justify-between items-center p-6 bg-gradient-to-r from-gray-900 to-gray-800 shadow-lg">
@@ -31,8 +33,8 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link className="hover:text-gray-400 transition duration-300" to="/cart">
-              Cart
+            <Link className="hover:text-gray-400 transition duration-300" to="/Cart">
+              Cart ({cart.length})
             </Link>
           </li>
         </ul>

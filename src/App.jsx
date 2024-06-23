@@ -6,14 +6,18 @@ import Footer from "./Components/Footer/Footer"
 import Header from "./Components/Header/Header"
 import { createHashRouter, Outlet, RouterProvider } from "react-router-dom"
 import RestaurentMenu from "./Components/RestaurentMenu/RestaurentMenu"
-
+import { Provider } from "react-redux"
+import appStore from "./Utils/appStore"
+import Cart from "./Components/Cart/Cart"
 function App() {
   return (
+    <Provider store={appStore}>
     <div className="app">
       <Header/>
       <Outlet/>
       <Footer/>
     </div>
+    </Provider>
   )
 }
 
@@ -37,6 +41,10 @@ export const appRouter = createHashRouter([
       {
         path: "/restaurant/:resId",
         element: <RestaurentMenu/>
+      }
+      , {
+        path: "/Cart",
+        element: <Cart/>
       }
     ]
   },
