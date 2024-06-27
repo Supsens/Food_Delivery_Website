@@ -7,7 +7,7 @@ import Shimmer from './Shimmer';
 const RestaurantMenu = () => {
   const { resId } = useParams();
   const resInfo = useRestaurantMenu(resId);
-  const [openCategoryIndex, setOpenCategoryIndex] = useState(0); // Start with the recommended card open (assuming it's the first one)
+  const [openCategoryIndex, setOpenCategoryIndex] = useState(0);
 
   if (!resInfo) {
     return (

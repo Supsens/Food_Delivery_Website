@@ -1,5 +1,5 @@
 import React from "react";
-import { LOGO_URL } from "../../Utils/logo";
+import { LOGO_URL } from "../../Utils/logo.js";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import useStatus from "../../Utils/useStatus";
