@@ -23,6 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
- src/Utils/logo.js
+*Utils/logo.js
 
 coverage

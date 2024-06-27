@@ -8,7 +8,7 @@ const Error = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
       <img
-        src="https://wallup.net/wp-content/uploads/2018/10/04/355094-cat-meme-quote-funny-humor-grumpy-2.jpg" 
+        src="https://media.pinatafarm.com/protected/B183D0EF-49B8-47BF-A523-E72FD0CFFAAC/Cute-Cat.2.meme.webp" 
         alt="Cute Cat"
         className="w-64 h-64 rounded-lg mb-6"
       />
