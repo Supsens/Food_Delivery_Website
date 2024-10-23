@@ -8,7 +8,7 @@ export const useSwiggyApi = () => {
     const swiggyApiCall = async () => {
       setLoading(true);
       try {
-        const response = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.37240&lng=78.43780&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        const response = await fetch("https://food-proxy-d53f.onrender.com/api/proxy/swiggy/dapi/dapi/restaurants/list/v5?lat=17.37240&lng=78.43780&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         const data = await response.json();
         const data1 = data?.data?.cards;
         console.log(data1);
