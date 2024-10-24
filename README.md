@@ -1,4 +1,4 @@
-## please enable cors plugin(Any cors extenstion) to view the deployment 
+
 
 # React + Vite
 
